@@ -1,15 +1,15 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M&T Ateliê e Beleza | Seu Espaço Exclusivo</title>
+    <title>M&T Ateliê & Beleza | Seu Espaço de Cuidado e Sofisticação</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Estilos Globais e Reset */
+        /* Configurações Globais (Reset) */
         * {
             margin: 0;
             padding: 0;
@@ -17,189 +17,364 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        :root {
-            --primary-color: #111111;
-            --secondary-color: #c5a880; /* Dourado elegante sofisticado */
-            --light-bg: #fdfdfd;
-            --gray-bg: #f4f4f4;
-            --text-dark: #222222;
-            --text-light: #ffffff;
-            --text-muted: #666666;
-        }
-
         body {
-            background-color: var(--light-bg);
-            color: var(--text-dark);
+            background-color: #121212;
+            color: #ffffff;
             line-height: 1.6;
         }
 
-        h1, h2, h3, .brand-logo {
-            font-family: 'Playfair Display', serif;
+        /* Variáveis de Cores Inspiradas no Estilo Expert */
+        :root {
+            --cor-principal: #1c1c1c;
+            --cor-destaque: #d4af37; /* Tom dourado sutil para elegância */
+            --cor-fundo-card: #1a1a1a;
+            --texto-claro: #f4f4f4;
+            --texto-escuro: #8c8c8c;
         }
 
         a {
             text-decoration: none;
             color: inherit;
-            transition: all 0.3s ease;
+            transition: 0.3s ease;
         }
 
-        /* Top Bar de Avisos */
-        .top-bar {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            text-align: center;
-            padding: 8px 10px;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-bottom: 1px solid #222;
-        }
-
-        /* Menu / Header */
+        /* Cabeçalho / Menu de Navegação */
         header {
-            background-color: rgba(255, 255, 255, 0.95);
-            position: sticky;
+            background-color: rgba(28, 28, 28, 0.95);
+            position: fixed;
+            width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-bottom: 1px solid #2a2a2a;
         }
 
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: table;
+            width: 100%;
             padding: 20px;
         }
 
-        .brand-logo {
-            font-size: 1.8rem;
+        .logo {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 22px;
             font-weight: 700;
-            letter-spacing: 1px;
-            color: var(--primary-color);
+            letter-spacing: 2px;
+            color: var(--texto-claro);
         }
 
-        .brand-logo span {
-            color: var(--secondary-color);
+        .logo span {
+            color: var(--cor-destaque);
         }
 
         .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 25px;
+            display: table-cell;
+            text-align: right;
+            vertical-align: middle;
         }
 
         .nav-menu a {
-            font-size: 0.9rem;
+            margin-left: 25px;
+            font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: var(--text-dark);
+            color: var(--texto-claro);
         }
 
         .nav-menu a:hover {
-            color: var(--secondary-color);
+            color: var(--cor-destaque);
         }
 
-        .btn-schedule-nav {
-            background-color: var(--primary-color);
-            color: var(--text-light) !important;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-size: 0.85rem !important;
-        }
-
-        .btn-schedule-nav:hover {
-            background-color: var(--secondary-color);
-            color: var(--primary-color) !important;
-        }
-
-        /* Seção Banner Principal (Hero) */
+        /* Banner Principal (Hero Section) */
         .hero {
-            position: relative;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 85vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            display: table;
+            width: 100%;
+            padding-top: 80px;
             text-align: center;
-            color: var(--text-light);
+        }
+
+        .hero-content {
+            display: table-cell;
+            vertical-align: middle;
             padding: 0 20px;
         }
 
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            font-weight: 300;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn-primary {
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-            padding: 15px 35px;
-            font-weight: 600;
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
             text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--texto-escuro);
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            font-weight: 300;
+        }
+
+        .btn-principal {
+            background-color: var(--cor-destaque);
+            color: #000000;
+            padding: 15px 35px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
             letter-spacing: 1px;
-            border-radius: 4px;
+            border: 2px solid var(--cor-destaque);
+            cursor: pointer;
             display: inline-block;
         }
 
-        .btn-primary:hover {
-            background-color: var(--text-light);
-            color: var(--primary-color);
-            transform: translateY(-2px);
+        .btn-principal:hover {
+            background-color: transparent;
+            color: var(--cor-destaque);
         }
 
-        /* Seções Gerais */
-        section {
-            padding: 80px 20px;
-            max-width: 1200px;
+        /* Seção Sobre / O Ateliê */
+        .sobre {
+            max-width: 900px;
             margin: 0 auto;
-        }
-
-        .section-header {
+            padding: 80px 20px;
             text-align: center;
-            margin-bottom: 50px;
         }
 
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
+        .section-title {
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
             position: relative;
-            display: inline-block;
             padding-bottom: 15px;
         }
 
-        .section-header h2::after {
+        .section-title::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
+            width: 50px;
             height: 2px;
-            background-color: var(--secondary-color);
+            background-color: var(--cor-destaque);
         }
 
-        .section-header p {
-            color: var(--text-muted);
-            margin-top: 15px;
-            font-size: 1.1rem;
+        .sobre p {
+            color: var(--texto-escuro);
+            font-size: 16px;
+            margin-top: 25px;
         }
 
-        /* Quem Somos */
-        .about-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align
+        /* Seção de Serviços */
+        .servicos-section {
+            background-color: var(--cor-principal);
+            padding: 80px 20px;
+        }
+
+        .servicos-container {
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+            display: table;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 20px;
+        }
+
+        .servico-card {
+            display: table-cell;
+            background-color: var(--cor-fundo-card);
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid #2a2a2a;
+            width: 33.33%;
+        }
+
+        .servico-card:hover {
+            border-color: var(--cor-destaque);
+        }
+
+        .servico-icon {
+            font-size: 35px;
+            color: var(--cor-destaque);
+            margin-bottom: 20px;
+        }
+
+        .servico-card h3 {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .servico-card p {
+            font-size: 14px;
+            color: var(--texto-escuro);
+        }
+
+        /* Seção Agenda Online / Formulário */
+        .agenda-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .form-grupo {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-grupo label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            color: var(--texto-claro);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: var(--cor-fundo-card);
+            border: 1px solid #333;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .form-control:focus {
+            border-color: var(--cor-destaque);
+            outline: none;
+        }
+
+        /* Rodapé (Footer) */
+        footer {
+            background-color: #0d0d0d;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid #2a2a2a;
+            font-size: 13px;
+            color: var(--texto-escuro);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsividade Básica (Dispositivos Móveis) */
+        @media (max-width: 768px) {
+            .nav-container, .nav-menu, .logo, .servicos-container, .servico-card {
+                display: block;
+                width: 100% !important;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            .nav-menu {
+                margin-top: 15px;
+            }
+            .nav-menu a {
+                margin: 0 10px;
+                display: inline-block;
+            }
+            .hero h1 { font-size: 30px; }
+            .servico-card { margin-bottom: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">M&T <span>ATELIÊ</span></div>
+            <nav class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#sobre">O Ateliê</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#agenda">Agenda Online</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>M&T Ateliê & Beleza</h1>
+            <p>Acompanhando as últimas tendências mundiais para oferecer alta qualidade, sofisticação e conforto no cuidado da sua beleza.</p>
+            <a href="#agenda" class="btn-principal">Agende seu horário</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2 class="section-title">Bem-vindo ao Nosso Ateliê</h2>
+        <p>Inspirado nos maiores e mais completos centros de estética, o M&T Ateliê & Beleza preza por oferecer uma experiência única. Nossa missão é unir atendimento personalizado de alta qualidade com um ambiente focado em inovação, bem-estar e sofisticação.</p>
+    </section>
+
+    <section id="servicos" class="servicos-section">
+        <div style="text-align: center;">
+            <h2 class="section-title">Nossos Serviços</h2>
+        </div>
+        
+        <div class="servicos-container">
+            <div class="servico-card">
+                <div class="servico-icon">✦</div>
+                <h3>Cabelo & Design</h3>
+                <p>Cortes modernos, coloração avançada, mechas e tratamentos reconstrutivos profundos assinados por especialistas.</p>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon">✦</div>
+                <h3>Unhas & Estética</h3>
+                <p>Manicure, pedicure, alongamentos em gel e cuidados estéticos minuciosos para a sua melhor versão.</p>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon">✦</div>
+                <h3>Maquiagem & Olhar</h3>
+                <p>Maquiagem social para grandes eventos, design de sobrancelhas personalizado e extensão de cílios.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="agenda" class="agenda-section">
+        <h2 class="section-title">Solicite seu Agendamento</h2>
+        <p style="color: var(--texto-escuro); margin-bottom: 30px; font-size: 14px;">Preencha os campos abaixo para solicitar o seu pré-agendamento. Entraremos em contato pelo WhatsApp para confirmar o seu horário.</p>
+        
+        <form action="https://api.whatsapp.com/send" method="GET" target="_blank">
+            <input type="hidden" name="phone" value="5541999999999">
+            
+            <div class="form-grupo">
+                <label for="nome">Seu Nome Completo</label>
+                <input type="text" id="nome" class="form-control" placeholder="Ex: Maria Silva" required>
+            </div>
+
+            <div class="form-grupo">
+                <label for="servico">Qual serviço deseja agendar?</label>
+                <select id="servico" name="text" class="form-control" required>
+                    <option value="">Selecione um serviço...</option>
+                    <option value="Olá! Gostaria de agendar um horário para Cabelo">Cabelo Feminino / Masculino</option>
+                    <option value="Olá! Gostaria de agendar um horário para Unhas">Manicure & Pedicure</option>
+                    <option value="Olá! Gostaria de agendar um horário para Estética/Maquiagem">Maquiagem & Estética</option>
+                    <option value="Olá! Gostaria de agendar uma consultoria personalizada">Outros Serviços</option>
+                </select>
+            </div>
+
+            <div class="form-grupo">
+                <label for="data">Preferência de Dia/Período</label>
+                <input type="text" id="data" class="form-control" placeholder="Ex: Sábado pela manhã" required>
+            </div>
+
+            <button type="submit" class="btn-principal" style="width: 100%; margin-top: 10px;">Enviar Solicitação</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 M&T Ateliê & Beleza. Todos os direitos reservados.</p>
+        <p style="font-size: 11px; letter-spacing: 0.5px;">Elegância, Conforto e Alta Performance em Beleza.</p>
+    </footer>
+
+</body>
+</html>
