@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -64,7 +64,7 @@
             font-weight: 700;
             letter-spacing: 2px;
             color: var(--texto-claro);
-            font-family: 'Cinzel', serif; /* Fonte de Inspiração */
+            font-family: 'Cinzel', serif;
         }
 
         .logo span {
@@ -107,7 +107,7 @@
         }
 
         .hero h1 {
-            font-family: 'Cinzel', serif; /* Fonte de Inspiração */
+            font-family: 'Cinzel', serif;
             font-size: 46px;
             font-weight: 700;
             letter-spacing: 4px;
@@ -151,7 +151,7 @@
         }
 
         .section-title {
-            font-family: 'Cinzel', serif; /* Fonte de Inspiração */
+            font-family: 'Cinzel', serif;
             font-size: 30px;
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -196,24 +196,29 @@
         .servico-card {
             display: table-cell;
             background-color: var(--cor-fundo-card);
-            padding: 45px 30px;
+            padding: 25px;
             text-align: center;
             border: 1px solid #252525;
             width: 33.33%;
+            vertical-align: top;
+            transition: 0.3s ease;
         }
 
         .servico-card:hover {
             border-color: var(--cor-destaque);
         }
 
-        .servico-icon {
-            font-size: 30px;
-            color: var(--cor-destaque);
+        /* Estilização das Imagens dos Serviços */
+        .servico-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
             margin-bottom: 20px;
+            border: 1px solid #2a2a2a;
         }
 
         .servico-card h3 {
-            font-family: 'Cinzel', serif; /* Fonte de Inspiração */
+            font-family: 'Cinzel', serif;
             font-size: 18px;
             text-transform: uppercase;
             margin-bottom: 15px;
@@ -296,7 +301,8 @@
             }
             .hero h1 { font-size: 32px; letter-spacing: 2px; }
             .servico-card { margin-bottom: 25px; }
-            .servicos-container { margin-top: 20px; }
+            .servicos-container { margin-top: 20px; border-spacing: 0; }
+            .servico-img { height: 300px; }
         }
     </style>
 </head>
@@ -334,17 +340,19 @@
         
         <div class="servicos-container">
             <div class="servico-card">
-                <div class="servico-icon">✦</div>
+                <img src="https://i.pinimg.com/474x/bd/6c/e6/bd6ce687dfb7cb004f373f03f13a4d01.jpg" alt="Cabelo & Design" class="servico-img">
                 <h3>Cabelo & Design</h3>
                 <p>Cortes modernos, coloração avançada, mechas e tratamentos reconstrutivos profundos assinados por especialistas.</p>
             </div>
+            
             <div class="servico-card">
-                <div class="servico-icon">✦</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPXUDAGBJxreVZB67p38TJlCpb5H143Sv3r7-3r3pl4Q&s=10" alt="Unhas & Estética" class="servico-img">
                 <h3>Unhas & Estética</h3>
                 <p>Manicure, pedicure, alongamentos em gel e cuidados estéticos minuciosos para a sua melhor versão.</p>
             </div>
+            
             <div class="servico-card">
-                <div class="servico-icon">✦</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiXdQExpNWT_z0TmJAO_EVz8gIc6dwYPlMWcYMscPj9A&s=10" alt="Maquiagem & Olhar" class="servico-img">
                 <h3>Maquiagem & Olhar</h3>
                 <p>Maquiagem social para grandes eventos, design de sobrancelhas personalizado e extensão de cílios.</p>
             </div>
